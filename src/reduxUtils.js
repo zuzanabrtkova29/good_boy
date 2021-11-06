@@ -2,7 +2,7 @@ import {configureStore, createSlice} from '@reduxjs/toolkit';
 
 const initialState = {
     currentStep: 1,
-    donationType: null,
+    donationType: 1,
     selectedShelter: null,
     donationAmount: null,
     name: null,
