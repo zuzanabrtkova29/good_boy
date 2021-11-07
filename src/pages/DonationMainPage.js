@@ -5,6 +5,7 @@ import {ShelterSelectionTitle, ShelterMandatoryTitle} from '../components/Shelte
 import ShelterSelectorDropdown from '../components/ShelterSelectionDropdown'
 import {useSelector} from 'react-redux'
 import {getDonationType} from '../reduxUtils'
+import {DonationAmountButtonGroup} from '../components/DonationAmountSelection'
 
 const apiRequest = async () => {
     const options = {
@@ -36,6 +37,7 @@ export function DonationMainPage() {
             <ShelterSelectionTitle>O projekte</ShelterSelectionTitle>
             <ShelterMandatoryTitle>{useSelector(getDonationType) ? "Nepovinné" : "Povinné"}</ShelterMandatoryTitle>
             <ShelterSelectorDropdown sheltersList={sheltersList}/>
+            <DonationAmountButtonGroup/>
         </div>
     )
 }
