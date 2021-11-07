@@ -9,6 +9,7 @@ const initialState = {
     surname: null,
     email: null,
     phone: null,
+    phoneCountry: "sk",
 }
 
 const goodBoySlice = createSlice({
@@ -45,6 +46,9 @@ const goodBoySlice = createSlice({
         setDonorPhone: (state, action) => {
             state.phone = action.payload
         },
+        setDonorPhoneCountry: (state, action) => {
+            state.phoneCountry = action.payload
+        }
     },
 })
 
@@ -59,6 +63,7 @@ export const {
     setDonorSurname,
     setDonorEmail,
     setDonorPhone,
+    setDonorPhoneCountry,
 } = goodBoySlice.actions
 
 export const getCurrentStep = (state) => state.currentState.currentStep
@@ -69,6 +74,7 @@ export const getDonorName = (state) => state.currentState.name
 export const getDonorSurname = (state) => state.currentState.surname
 export const getDonorEmail = (state) => state.currentState.email
 export const getDonorPhone = (state) => state.currentState.phone
+export const getDonorPhoneCountry = (state) => state.currentState.phoneCountry
 
 export const store = configureStore({
     reducer: {

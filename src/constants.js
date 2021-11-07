@@ -9,4 +9,11 @@ export const colors = {
     amountGradientColor: `linear-gradient(115.41deg, #CD8A64 -1.77%, #C4794F 73.03%)`,
     stepButtonGradientColor: `linear-gradient(115.41deg, #CD8A64 -1.77%, #C4794F 73.03%)`,
     buttonDisabledColor: '#9F9F9F',
+    backButtonColor: '#F3E2D9',
+    errorMessageColor: '#FF0000',
+}
+
+export const countryPhoneCodes = {
+    "sk": "+421",
+    "cz": "+420",
 }
