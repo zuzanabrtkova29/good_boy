@@ -5,11 +5,13 @@ import ConfirmationPanel from '../components/ConfirmationPanel'
 import ConfirmationCheckbox from '../components/AgreementCheckbox'
 import BottomBar from '../components/BottomBar'
 import DogImg from '../components/DogImg'
+import TopBar from '../components/TopBar'
 
 export function ConfirmationPage() {
     return (
         <div className="form">
             <DogImg/>
+            <TopBar/>
             <MainTitle>Skontrolujte si zadané údaje</MainTitle>
             <ConfirmationPanel/>
             <ConfirmationCheckbox/>
