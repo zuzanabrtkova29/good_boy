@@ -3,6 +3,7 @@ import MainTitle from '../components/MainTitle'
 import {BackButton, FinishConfirmButton} from '../components/stepChangeButtons'
 import ConfirmationPanel from '../components/ConfirmationPanel'
 import ConfirmationCheckbox from '../components/AgreementCheckbox'
+import BottomBar from '../components/BottomBar'
 
 export function ConfirmationPage() {
     return (
@@ -12,6 +13,7 @@ export function ConfirmationPage() {
             <ConfirmationCheckbox/>
             <BackButton margin={"827px 0 0 250px"}/>
             <FinishConfirmButton/>
+            <BottomBar/>
         </div>
     )
 }

@@ -7,6 +7,7 @@ import {useSelector} from 'react-redux'
 import {getDonationType} from '../reduxUtils'
 import {DonationAmountButtonGroup} from '../components/DonationAmountSelection'
 import {NextButton} from '../components/stepChangeButtons'
+import BottomBar from '../components/BottomBar'
 
 const apiRequest = async () => {
     const options = {
@@ -40,6 +41,7 @@ export function DonationMainPage() {
             <ShelterSelectorDropdown sheltersList={sheltersList}/>
             <DonationAmountButtonGroup/>
             <NextButton/>
+            <BottomBar/>
         </div>
     )
 }
