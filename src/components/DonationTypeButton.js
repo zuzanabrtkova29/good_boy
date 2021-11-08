@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {colors} from '../constants'
+import {colors, donationTypes} from '../constants'
 import {useSelector, useDispatch} from 'react-redux'
 import {getDonationType, setDonationType} from '../reduxUtils'
 
@@ -39,7 +39,7 @@ export function FoundationDonationButton () {
             selected={selected}
             onClick={() => dispatch(setDonationType(1))}
         >
-            Chcem finančne prispieť celej nadácii
+            {donationTypes[1]}
         </StyledDonationTypeButton>
     )
 }
@@ -56,7 +56,7 @@ export function ShelterDonationButton() {
             selected={selected}
             onClick={() => dispatch(setDonationType(0))}
         >
-            Chcem finančne prispieť konkrétnemu útulku
+            {donationTypes[0]}
         </StyledDonationTypeButton>
     )
 }

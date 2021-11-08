@@ -8,7 +8,7 @@ export function DonorFormPage() {
         <div className="form">
             <MainTitle>Potrebujeme od Vás zopár informácií</MainTitle>
             <DonorForm/>
-            <BackButton/>
+            <BackButton margin={"764px 0 0 250px"}/>
             <NextConfirmButton/>
         </div>
     )

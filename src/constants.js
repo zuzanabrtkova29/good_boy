@@ -17,3 +17,8 @@ export const countryPhoneCodes = {
     "sk": "+421",
     "cz": "+420",
 }
+
+export const donationTypes = {
+    0: "Chcem finančne prispieť konkrétnemu útulku",
+    1: "Chcem finančne prispieť celej nadácii",
+}

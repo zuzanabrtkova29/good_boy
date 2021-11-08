@@ -12,6 +12,7 @@ import {
     getDonorSurname,
     getDonorEmail,
     getDonorPhone,
+    getAgreementChecked,
 } from '../reduxUtils'
 import {nameValidation, emailValidation, phoneValidation} from '../formValidation'
 
@@ -101,6 +102,21 @@ export function NextConfirmButton() {
     )
 }
 
+export function FinishConfirmButton() {
+    const active = useSelector(getAgreementChecked)
+
+    return (
+        <StyledNextButton
+            width={"164px"}
+            margin={"827px 0 0 638px"}
+            padding={"20px 24px 20px 24px"}
+            disabled={!active}
+        >
+            Odoslať formulár
+        </StyledNextButton>
+    )
+}
+
 const StyledBackButton = styled.button`
   position: absolute;
   width: 81px;
@@ -118,7 +134,7 @@ const StyledBackButton = styled.button`
   background: ${colors.backButtonColor};
 `
 
-export function BackButton() {
+export function BackButton(props) {
     const dispatch = useDispatch()
 
     const onClick = () => {
@@ -127,7 +143,7 @@ export function BackButton() {
 
     return (
         <StyledBackButton
-            margin={"764px 0 0 250px"}
+            {...props}
             onClick={onClick}
         >
             Späť

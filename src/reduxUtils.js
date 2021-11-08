@@ -10,6 +10,7 @@ const initialState = {
     email: null,
     phone: null,
     phoneCountry: "sk",
+    agreementChecked: false,
 }
 
 const goodBoySlice = createSlice({
@@ -48,7 +49,10 @@ const goodBoySlice = createSlice({
         },
         setDonorPhoneCountry: (state, action) => {
             state.phoneCountry = action.payload
-        }
+        },
+        setAgreementChecked: (state) => {
+            state.agreementChecked = !state.agreementChecked
+        },
     },
 })
 
@@ -64,6 +68,7 @@ export const {
     setDonorEmail,
     setDonorPhone,
     setDonorPhoneCountry,
+    setAgreementChecked,
 } = goodBoySlice.actions
 
 export const getCurrentStep = (state) => state.currentState.currentStep
@@ -75,6 +80,7 @@ export const getDonorSurname = (state) => state.currentState.surname
 export const getDonorEmail = (state) => state.currentState.email
 export const getDonorPhone = (state) => state.currentState.phone
 export const getDonorPhoneCountry = (state) => state.currentState.phoneCountry
+export const getAgreementChecked = (state) => state.currentState.agreementChecked
 
 export const store = configureStore({
     reducer: {
