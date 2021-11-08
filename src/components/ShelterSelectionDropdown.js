@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import styled from 'styled-components'
 import {colors} from '../constants'
 import {useSelector, useDispatch} from 'react-redux'
-import {getSelectedShelter, setSelectedShelter} from '../reduxUtils'
+import {getSelectedShelter, setSelectedShelter, setSelectedShelterID} from '../reduxUtils'
 
 const ShelterSelectorContainer = styled.div``
 
@@ -60,6 +60,7 @@ const ShelterListItem = styled.li`
   padding: 10px 0 0 21px;
   height: 36px;
   cursor: pointer;
+  background: ${colors.basicButtonColor};
 
   &:hover {
     background: ${colors.gradientColor};
@@ -96,6 +97,7 @@ const ShelterSelectionDropdown = ({sheltersList}) => {
                                 key={id}
                                 onClick={() => {
                                     dispatch(setSelectedShelter(name))
+                                    dispatch(setSelectedShelterID(id))
                                     setIsOpen(false)
                                 }}
                             >

@@ -4,6 +4,7 @@ const initialState = {
     currentStep: 1,
     donationType: 1,
     selectedShelter: null,
+    selectedShelterID: null,
     donationAmount: null,
     name: null,
     surname: null,
@@ -23,14 +24,15 @@ const goodBoySlice = createSlice({
         backStep: (state) => {
             state.currentStep -= 1;
         },
-        finishDonation: (state) => {
-            state.currentStep = 1
-        },
+        finishDonation: (state) =>  initialState,
         setDonationType: (state, action) => {
             state.donationType = action.payload
         },
         setSelectedShelter: (state, action) => {
             state.selectedShelter = action.payload
+        },
+        setSelectedShelterID: (state, action) => {
+            state.selectedShelterID = action.payload
         },
         setDonationAmount: (state, action) => {
             state.donationAmount = action.payload
@@ -62,6 +64,7 @@ export const {
     finishDonation,
     setDonationType,
     setSelectedShelter,
+    setSelectedShelterID,
     setDonationAmount,
     setDonorName,
     setDonorSurname,
@@ -74,6 +77,7 @@ export const {
 export const getCurrentStep = (state) => state.currentState.currentStep
 export const getDonationType = (state) => state.currentState.donationType
 export const getSelectedShelter = (state) => state.currentState.selectedShelter
+export const getSelectedShelterID = (state) => state.currentState.selectedShelterID
 export const getDonationAmount = (state) => state.currentState.donationAmount
 export const getDonorName = (state) => state.currentState.name
 export const getDonorSurname = (state) => state.currentState.surname

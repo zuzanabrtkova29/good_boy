@@ -1,19 +1,16 @@
-export const nameValidation = (name, fieldType, required) => {
+export const nameValidation = (name, fieldType) => {
     if (name.trim() === '') {
-        if (required) {
-            return `pole ${fieldType} je povinné`
-        }
-        return null
+        return `pole ${fieldType} je povinné`
     }
     if (name.trim().length < 2 || name.trim().length > 20) {
         return `${fieldType} musí mať 2-20 znakov`
     }
-    return null;
+    return null
 }
 
 export const emailValidation = (email) => {
     if (
-        /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
+        /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(
             email,
         )
     ) {
@@ -31,10 +28,10 @@ export const phoneValidation = (phone) => {
             phone.trim(),
         )
     ) {
-        return null;
+        return null
     }
     if (phone.trim() === '') {
-        return 'pole telefónne číslo je povinné'
+        return null
     }
     return 'prosím zadajte validné telefónne číslo'
 }

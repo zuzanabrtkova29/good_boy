@@ -91,7 +91,10 @@ export default function ConfirmationPanel() {
             />
             <ConfirmationPanelItem
                 title={"Telefónne číslo"}
-                value={countryPhoneCodes[savedDonorPhoneCountry] + " " + savedDonorPhone}
+                value={savedDonorPhone
+                    ? (countryPhoneCodes[savedDonorPhoneCountry] + " " + savedDonorPhone)
+                    : ""
+                }
                 tMargin={"650px"}
                 tMarginI={"677px"}
             />

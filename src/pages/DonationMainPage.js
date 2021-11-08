@@ -9,23 +9,13 @@ import {DonationAmountButtonGroup} from '../components/DonationAmountSelection'
 import {NextButton} from '../components/stepChangeButtons'
 import BottomBar from '../components/BottomBar'
 import DogImg from '../components/DogImg'
-
-const apiRequest = async () => {
-    const options = {
-        method: 'GET',
-        headers: {},
-    }
-    const apiUrl = "https://frontend-assignment-api.goodrequest.com/api/v1/shelters"
-    const res = await fetch(apiUrl, options)
-    if (res.status >= 400) return res
-    return await res.json()
-}
+import {loadSheltersRequest} from '../apiCalls'
 
 export function DonationMainPage() {
     const [sheltersList, setSheltersList] = useState([])
 
     useEffect(() => {
-        apiRequest().then((data) => {
+        loadSheltersRequest().then((data) => {
             if (data.shelters) {
                 setSheltersList(data.shelters)
             }
@@ -38,12 +28,12 @@ export function DonationMainPage() {
             <MainTitle>Vyberte si možnosť, ako chcete pomôcť</MainTitle>
             <ShelterDonationButton/>
             <FoundationDonationButton/>
-            <ShelterSelectionTitle>O projekte</ShelterSelectionTitle>
-            <ShelterMandatoryTitle>{useSelector(getDonationType) ? "Nepovinné" : "Povinné"}</ShelterMandatoryTitle>
-            <ShelterSelectorDropdown sheltersList={sheltersList}/>
             <DonationAmountButtonGroup/>
             <NextButton/>
             <BottomBar/>
+            <ShelterSelectionTitle>O projekte</ShelterSelectionTitle>
+            <ShelterMandatoryTitle>{useSelector(getDonationType) ? "Nepovinné" : "Povinné"}</ShelterMandatoryTitle>
+            <ShelterSelectorDropdown sheltersList={sheltersList}/>
         </div>
     )
 }

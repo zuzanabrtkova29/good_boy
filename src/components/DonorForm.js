@@ -121,10 +121,10 @@ export default function DonorForm() {
     const savedDonorPhoneCountry = useSelector(getDonorPhoneCountry)
 
     const validationNameResult = savedDonorName !== null
-        ? nameValidation(savedDonorName, "meno", false)
+        ? nameValidation(savedDonorName, "meno")
         : null
     const validationSurnameResult = savedDonorSurname !== null
-        ? nameValidation(savedDonorSurname, "priezvisko", true)
+        ? nameValidation(savedDonorSurname, "priezvisko")
         : null
     const validationEmailResult = savedDonorEmail !== null
         ? emailValidation(savedDonorEmail)
