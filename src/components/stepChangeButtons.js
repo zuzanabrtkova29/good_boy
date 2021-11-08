@@ -42,10 +42,10 @@ export function NextButton() {
     const dispatch = useDispatch()
     const selectedDonationType = useSelector(getDonationType)
     const selectedShelter = useSelector(getSelectedShelter)
-    const selectedAmount = useSelector(getDonationAmount)
+    const selectedAmount = useSelector(getDonationAmount) || ""
 
     const nextStepActive = () => {
-        if (selectedDonationType === 1 && selectedAmount)
+        if (selectedDonationType === 1 && selectedAmount && parseInt(selectedAmount) > 0)
             return true
         if (selectedDonationType === 0 && selectedShelter && selectedAmount)
             return true
