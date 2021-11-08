@@ -4,10 +4,12 @@ import {BackButton, FinishConfirmButton} from '../components/stepChangeButtons'
 import ConfirmationPanel from '../components/ConfirmationPanel'
 import ConfirmationCheckbox from '../components/AgreementCheckbox'
 import BottomBar from '../components/BottomBar'
+import DogImg from '../components/DogImg'
 
 export function ConfirmationPage() {
     return (
         <div className="form">
+            <DogImg/>
             <MainTitle>Skontrolujte si zadané údaje</MainTitle>
             <ConfirmationPanel/>
             <ConfirmationCheckbox/>

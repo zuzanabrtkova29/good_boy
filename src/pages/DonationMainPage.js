@@ -8,6 +8,7 @@ import {getDonationType} from '../reduxUtils'
 import {DonationAmountButtonGroup} from '../components/DonationAmountSelection'
 import {NextButton} from '../components/stepChangeButtons'
 import BottomBar from '../components/BottomBar'
+import DogImg from '../components/DogImg'
 
 const apiRequest = async () => {
     const options = {
@@ -33,6 +34,7 @@ export function DonationMainPage() {
 
     return (
         <div className="main">
+            <DogImg/>
             <MainTitle>Vyberte si možnosť, ako chcete pomôcť</MainTitle>
             <ShelterDonationButton/>
             <FoundationDonationButton/>
