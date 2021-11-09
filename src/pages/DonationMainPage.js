@@ -10,6 +10,7 @@ import {NextButton} from '../components/stepChangeButtons'
 import BottomBar from '../components/BottomBar'
 import DogImg from '../components/DogImg'
 import {loadSheltersRequest} from '../apiCalls'
+import StepIndicator from '../components/StepIndicator'
 
 export function DonationMainPage() {
     const [sheltersList, setSheltersList] = useState([])
@@ -24,6 +25,7 @@ export function DonationMainPage() {
 
     return (
         <div className="main">
+            <StepIndicator/>
             <DogImg/>
             <MainTitle>Vyberte si možnosť, ako chcete pomôcť</MainTitle>
             <ShelterDonationButton/>

@@ -5,10 +5,12 @@ import {BackButton, NextConfirmButton} from '../components/stepChangeButtons'
 import BottomBar from '../components/BottomBar'
 import DogImg from '../components/DogImg'
 import TopBar from '../components/TopBar'
+import StepIndicator from '../components/StepIndicator'
 
 export function DonorFormPage() {
     return (
         <div className="form">
+            <StepIndicator/>
             <DogImg/>
             <TopBar/>
             <MainTitle>Potrebujeme od Vás zopár informácií</MainTitle>
