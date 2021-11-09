@@ -3,9 +3,11 @@ import DonorFormPage from './pages/DonorFormPage'
 import ConfirmationPage from './pages/ConfirmationPage'
 import {useSelector} from 'react-redux'
 import {getCurrentStep} from './reduxUtils'
+import {stepsTitles} from './constants'
 
 function App() {
     const currentStep = useSelector(getCurrentStep)
+    document.title = stepsTitles[currentStep]
     return (
         <div className="App">
             {

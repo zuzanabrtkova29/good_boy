@@ -22,3 +22,9 @@ export const donationTypes = {
     0: "Chcem finančne prispieť konkrétnemu útulku",
     1: "Chcem finančne prispieť celej nadácii",
 }
+
+export const stepsTitles = {
+    1: "GoodBoy - zvoľte formu pomoci",
+    2: "GoodBoy - vyplnenie údajov",
+    3: "GoodBoy - potvrdenie údajov",
+}

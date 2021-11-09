@@ -23,6 +23,7 @@ export const ShelterMandatoryTitle = styled.div`
   font-weight: 800;
   font-style: normal;
   font-size: 14px;
+  text-align: right;
   line-height: 19px;
   margin: 539px 0 0 732px;
   opacity: 0.8;

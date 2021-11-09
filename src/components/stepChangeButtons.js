@@ -26,6 +26,7 @@ const StyledNextButton = styled.button`
   width: ${(props) => props.width};
   height: 59px;
   border-radius: 100px;
+  border: none;
   font-family: Public Sans;
   font-style: normal;
   font-weight: 800;
@@ -153,6 +154,7 @@ const StyledBackButton = styled.button`
   font-size: 14px;
   color: ${colors.basicTitleColor};
   line-height: 19px;
+  border: none;
   margin: ${(props) => props.margin};
   padding: 20px 24px 20px 24px;
   box-shadow: ${nextStepActiveShadow};
