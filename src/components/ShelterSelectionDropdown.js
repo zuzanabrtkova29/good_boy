@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import {colors} from '../constants'
 import {useSelector, useDispatch} from 'react-redux'
 import {getSelectedShelter, setSelectedShelter, setSelectedShelterID} from '../reduxUtils'
+import arrow from '../assets/arrow.png'
 
 const ShelterSelectorContainer = styled.div``
 
@@ -40,6 +41,11 @@ const ShelterHeaderSubtitle = styled.div`
   font-size: 16px;
   line-height: 21px;
   color: ${(props) => props.selectedShelter ? colors.basicTitleColor : colors.basicSubtitleColor};
+`
+
+const ShelterDropdownArrow = styled.img`
+  position: absolute;
+  margin: 35px 0 0 518px;
 `
 const ShelterList = styled.ul`
   position: absolute;
@@ -88,6 +94,7 @@ const ShelterSelectionDropdown = ({sheltersList}) => {
                         : "Vyberte útulok zo zoznamu"
                     }
                 </ShelterHeaderSubtitle>
+                <ShelterDropdownArrow src={arrow} alt={"arrow"}/>
             </ShelterHeader>
             {isOpen && (
                 <ShelterList>
